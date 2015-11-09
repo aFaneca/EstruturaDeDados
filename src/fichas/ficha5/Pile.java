@@ -5,9 +5,7 @@
  */
 package fichas.ficha5;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.ListIterator;
 
 /**
  *
@@ -15,16 +13,11 @@ import java.util.ListIterator;
  */
 public class Pile{
     public void empty(List l){
-        l = Collections.emptyList();
+        l.clear();
     }
     
     public Object peek(List l){
-        ListIterator li = l.listIterator();
-        
-        if(li.hasNext())
-            return li.next();
-        else
-            return null;
+        return l.get(l.size() - 1);
     }
     
     public void pop(List l){
