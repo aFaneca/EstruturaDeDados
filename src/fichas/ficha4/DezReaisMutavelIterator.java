@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ed.ficha.pkg4;
+package fichas.ficha4;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.ConcurrentModificationException;
 
 /**
  *
  * @author Marco
  */
-public class DezReaisIterator extends DezReais implements Iterator<Double>{
-    DezReais reais;
+public class DezReaisMutavelIterator extends DezReaisMutavel implements Iterator<Double>{
+    DezReaisMutavel reais;
     
-    public DezReaisIterator(DezReais reais){
+    // Not sure if correct way to throw exception
+    public DezReaisMutavelIterator(DezReaisMutavel reais) throws ConcurrentModificationException{
         this.reais = reais;
     }
     
@@ -26,16 +28,16 @@ public class DezReaisIterator extends DezReais implements Iterator<Double>{
 
     @Override
     public Double next(){
-        if(this.hasNext()){
+        if(this.hasNext())
             return reais.numeros.get(reais.contador++);
-        }
         
         throw new NoSuchElementException();
     }
 
+    // Not sure if correct way to throw exception
     @Override
-    public void remove(){
-        throw new UnsupportedOperationException();
+    public void remove() throws IllegalStateException{
+        System.out.println("Removing Position <" + (reais.contador) + ">" + " - Containing Element: <" + reais.numeros.get(reais.contador) + ">");
     }
     
 }
