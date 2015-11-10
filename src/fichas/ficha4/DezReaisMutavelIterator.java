@@ -16,8 +16,7 @@ import java.util.ConcurrentModificationException;
 public class DezReaisMutavelIterator extends DezReaisMutavel implements Iterator<Double>{
     DezReaisMutavel reais;
     
-    // Not sure if correct way to throw exception
-    public DezReaisMutavelIterator(DezReaisMutavel reais) throws ConcurrentModificationException{
+    public DezReaisMutavelIterator(DezReaisMutavel reais){
         this.reais = reais;
     }
     

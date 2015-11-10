@@ -16,7 +16,6 @@ public class ficha2 {
 	
 	
 	public static int [] criaArrayCom(int valor, int dimensao, boolean diferentes){
-	
 		Random y = new Random();
 		List <Integer> x= new ArrayList<Integer> (dimensao); 
 		int temp;

@@ -37,7 +37,7 @@ public class Ex1 {
         start();
         int soma = 0;
         for(long i = 0; i < n; i++)
-                soma++;
+            soma++;
         stop();
         System.out.println("N = " + soma);
     }

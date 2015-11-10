@@ -5,9 +5,9 @@
  */
 package fichas.ficha4;
 
-import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.ConcurrentModificationException;
 
 /**
  *
@@ -16,8 +16,7 @@ import java.util.NoSuchElementException;
 public class DezReaisMutavelIteratorPositivos extends DezReaisMutavel implements Iterator<Double>{
     DezReaisMutavel reais;
     
-    // Not sure if correct way to throw exception
-    public DezReaisMutavelIteratorPositivos(DezReaisMutavel reais) throws ConcurrentModificationException{
+    public DezReaisMutavelIteratorPositivos(DezReaisMutavel reais){
         this.reais = reais;
     }
     

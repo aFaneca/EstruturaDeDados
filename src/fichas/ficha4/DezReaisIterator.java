@@ -37,5 +37,4 @@ public class DezReaisIterator extends DezReais implements Iterator<Double>{
     public void remove(){
         throw new UnsupportedOperationException();
     }
-    
 }
