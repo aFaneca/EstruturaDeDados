@@ -35,14 +35,18 @@ public class EDFicha5{
         list2.set(0, "LinkedList TEST - 0");
         list2.set(3, "LinkedList TEST - 3");
         
+        // Only printing variable: list to show
         System.out.println("Normal: \n");
         for(String s : list)
             System.out.println(s);
         
         // Reverse list and iterate over it with a ListIterator
         Collections.reverse(list);
+        Collections.reverse(list2);
+        
         ListIterator li = list.listIterator();
         
+        // Only printing variable: list to show
         System.out.println("\nReversed: \n");
         while(li.hasNext())
             System.out.println(li.next());
