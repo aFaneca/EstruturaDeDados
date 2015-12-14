@@ -15,7 +15,7 @@ public class Registo{
     List<Pessoa> pessoas;
     HashMap<String, List<Pessoa>> nomes;
     HashMap<String, List<Pessoa>> moradas;
-    HashMap<Integer, Pessoa> nifs;
+    HashMap<Integer, Pessoa> nif;
     
     public Registo(){
         pessoas = new ArrayList<>();
