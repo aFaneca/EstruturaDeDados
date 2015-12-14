@@ -21,7 +21,7 @@ public class Registo{
         pessoas = new ArrayList<>();
         nomes = new LinkedHashMap<>();
         moradas = new LinkedHashMap<>();
-        nifs = new LinkedHashMap<>();
+        nif = new LinkedHashMap<>();
     }
     
     // Adiciona uma pessoa nova à lista pessoas se o nif não existir (NIF é único)
@@ -30,13 +30,13 @@ public class Registo{
             pessoas.add(p);
             nomes.put(p.getNome(), pessoas);
             moradas.put(p.getMorada(), pessoas);
-            nifs.put(p.getNif(), p);
+            nif.put(p.getNif(), p);
         }
     }
     
     // Se encontrar pessoa a partir do nif retorna a pessoa, senão, retorna null
     public Pessoa getPessoa(Integer nif){
-        return nifs.get(nif);
+        return this.nif.get(nif);
     }
     
     // Procura as pessoas que vivem na morada tal e adiciona a uma nova lista, que vai retornar no final
