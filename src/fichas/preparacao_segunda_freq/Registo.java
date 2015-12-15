@@ -26,7 +26,7 @@ public class Registo{
     
     // Adiciona uma pessoa nova à lista pessoas se o nif não existir (NIF é único)
     public void add(Pessoa p){
-        if(getPessoa(p.getNif()) != null){
+        if(getPessoa(p.getNif()) == null){
             pessoas.add(p);
             nomes.put(p.getNome(), pessoas);
             moradas.put(p.getMorada(), pessoas);

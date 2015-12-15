@@ -9,7 +9,7 @@ package fichas.preparacao_segunda_freq;
  *
  * @author Marco
  */
-public class Pessoa{
+public class Pessoa implements Comparable<Pessoa>{
     String nome;
     String morada;
     Integer nif;
@@ -42,5 +42,10 @@ public class Pessoa{
 
     public void setNif(Integer nif){
         this.nif = nif;
+    }
+
+    @Override
+    public int compareTo(Pessoa t){
+        return Integer.compare(Cidade.getPopulacao(morada), Cidade.getPopulacao(t.getMorada()));
     }
 }
